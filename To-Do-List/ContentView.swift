@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var toDoList = ToDoList()
+    @State private var showingAddItemView = false
     class ToDoList: ObservableObject {
         @Published var items = [ToDoItem(priority: "High", description: "Take out trash", dueDate: Date()),
                                 ToDoItem(priority: "Medium", description: "Pick up clothes", dueDate: Date()),
